@@ -1,0 +1,112 @@
+# Konu başlıkları için anahtar kelimeler
+keywords = {
+    'Siyaset': ["seçim", "parti", "hükümet", "başkan", "milletvekili", "demokrasi", "siyaset", "yasama",
+                    "yürütme", "hukuk", "adalet", "anayasa", "iktidar", "muhalefet", "koalisyon", "seçmen",
+                    "oy", "sandık", "referandum", "politikacı", "kampanya", "oy verme", "parlamento",
+                    "meclis", "başbakan", "bakan", "devlet", "cumhurbaşkanı", "meclis başkanı", "sosyal politika",
+                    "ekonomi", "federalizm", "milletvekili", "seçim kampanyası", "bütçe", "vergi", "strateji",
+                    "koalisyon hükümeti", "devlet başkanı", "halk oylaması", "dış politika", "güvenlik", "terör",
+                    "özgürlük", "hukuk devleti", "adalet reformu", "insan hakları", "özgürlükler", "toplum",
+                    "kalkınma", "ülke", "seçim sonuçları", "yönetim", "politika", "başkanlık", "anayasaya aykırı",
+                    "toplum sözleşmesi", "kamuoyu", "demokratikleşme", "sosyal haklar", "özgür basın", "ifade özgürlüğü",
+                    "seçim barajı", "yolsuzluk", "savaş", "barış", "yönetim tarzı", "seçim güvenliği", "politik analiz",
+                    "partizanlık", "çift oy", "halk", "ülke yönetimi", "eğitim reformu", "toplumsal cinsiyet eşitliği",
+                    "sosyal güvenlik", "ekonomik kriz", "göçmen", "ülke politikası", "yasal düzenlemeler", "seçmen kaydı",
+                    "toplumsal yapı", "kamu hizmetleri", "güçler ayrılığı", "demokratik değerler"],
+    'Teknoloji': ["yazılım", "donanım", "bilgisayar", "internet", "robotik", "yapay zeka", "dijital", "programlama",
+                    "web", "ağ", "blokzincir", "veri", "bulut", "veri tabanı", "algoritma", "kodlama", "uygulama",
+                    "app", "mimari", "ağ güvenliği", "hack", "siber güvenlik", "web tasarımı", "frontend", "backend",
+                    "mobil", "platform", "yazılım geliştirme", "cihaz", "bilişim", "teknoloji şirketi", "donanım geliştirme",
+                    "cloud computing", "API", "program", "sistem", "veri analitiği", "makine öğrenmesi", "NLP",
+                    "yapay zeka uygulamaları", "büyük veri", "IoT", "nesnelerin interneti", "3D yazıcı", "blockchain",
+                    "VPN", "sistem yönetimi", "sunucu", "internet of things", "veritabanı yönetimi", "geliştirici",
+                    "yazılım mühendisliği", "script", "çevrimiçi", "saas", "saas uygulamaları", "android", "ios",
+                    "ar/vr", "artırılmış gerçeklik", "sanallaştırma", "yazılım testi", "agile", "scrum", "veri bilimi",
+                    "bilişim teknolojileri", "server", "girişim", "startup", "yazılım güncellemesi", "geliştirici araçları",
+                    "yazılım mimarisi", "machine learning", "deep learning", "programcı", "kod", "test otomasyonu",
+                    "devops", "web geliştirme", "yazılım tasarımı", "turing test", "sosyal medya", "kullanıcı deneyimi",
+                    "uzay teknolojisi", "teknoloji inovasyonu", "girişimcilik", "sağlık teknolojisi", "otomasyon",
+                    "nesnelerin interneti", "smart city", "veri güvenliği", "makine mühendisliği", "giyilebilir teknoloji"],
+    'Spor': ["futbol", "basketbol", "voleybol", "tenis", "spor", "maç", "oyuncu", "takım", "şampiyon",
+    "lig", "gol", "futbolcu", "basketbolcu", "stadyum", "saha", "sprint", "koşu", "kapalı alan",
+    "dış mekan", "antrenman", "fiziksel aktivite", "sağlık", "performans", "şut", "pas", "top",
+    "sarı kart", "kırmızı kart", "hakem", "oyun kurucu", "savunma", "hücum", "skor", "puan",
+    "turnuva", "final", "grup aşaması", "yılın oyuncusu", "şampiyonluk", "müsabaka", "yıldız oyuncu",
+    "yarış", "sporcu", "spor salonu", "serbest stil", "takım oyunu", "bireysel spor", "olimpiyat",
+    "dünya şampiyonası", " Avrupa şampiyonası", "dünya kupası", "final maçı", "bitirme", "şampiyonluk kutlaması",
+    "koşu parkuru", "yüzme", "atletizm", "güç", "çalışma", "basketbol potası", "futbol kalesi",
+    "tenis kortu", "yüzme havuzu", "müsabakalara katılım", "yarışma", "rekor", "en iyi performans",
+    "güç antrenmanı", "fiziksel kondisyon", "çalışma programı", "kondisyon", "cephe", "form", "sprint",
+    "isabet", "ribaunt", "smash", "serbest atış", "rakip", "koç", "sporcunun gelişimi", "ekip",
+
+
+"işbirliği", "dostluk maçı", "hız", "olimpiyat oyunları", "sponsor", "galibiyet", "yenilgi",
+    "yarışma parkuru", "skorboard", "antrenör", "oyun stratejisi", "teknik", "takım çalışması",
+
+
+"futbol sahası", "baskette üçlük", "basketbol topu", "futbol topu", "sporcular", "antrenman programı"],
+    'Sağlık': ["hastalık", "doktor", "tedavi", "ilaç", "sağlık", "kanser", "grip", "aşı", "beslenme",
+"spor", "kardiyoloji", "kan basıncı", "kanser tedavisi", "tıbbi", "test", "ameliyat",
+"sağlık sigortası", "fiziksel terapi", "doktor önerisi", "hijyen", "mikrop", "bakteri",
+    "virüs", "hasta", "rehabilitasyon", "tansiyon", "uyku", "depresyon", "gıda", "yoğun bakım",
+"acil servis", "beyin", "kalp", "nefes", "ağrı", "diyet", "psikoloji", "mental sağlık",
+"kemoterapi", "ağrı kesici", "vücut", "bağışıklık", "doktor muayenesi", "fiziksel sağlık",
+    "göz hastalıkları", "kulak burun boğaz", "dental sağlık", "psikiyatri", "genel sağlık",
+"endokrinoloji", "diabetes", "astım", "romatizma", "sağlıklı yaşam", "beden sağlığı",
+"psikosomatik", "stres", "uyarı", "kan şekeri", "kalp sağlığı", "sağlık taraması", "beslenme düzeni",
+"alzheimer", "çocuk sağlığı", "kadın sağlığı", "erkek sağlığı", "acil müdahale", "sağlık eğitimi",
+"doğum kontrolü", "eklem hastalıkları", "immün sistem", "koruyucu sağlık", "ağız sağlığı",
+"sağlık uygulamaları", "genetik test", "kardiyovasküler", "doku", "organ nakli", "gelişim",
+"fizyoterapi", "tıp", "laboratuvar", "test sonuçları", "kalp krizi", "sıhhi", "beyin cerrahisi",
+"cilt hastalıkları", "sağlık takip cihazları", "dolaşım sistemi", "vücut sağlığı", "sıvı tedavisi",
+"hormonal tedavi", "beslenme uzmanı", "fiziksel muayene", "iyileşme", "sağlık kuruluşu"],
+    'Eğlence': ["film", "sinema", "dizi", "müzik", "konser", "şarkı", "oyun", "etkinlik", "komedi",
+    "sanat", "televizyon", "performans", "sahne", "gösteri", "festival", "tiyatro", "müzikal",
+    "belgesel", "yönetmen", "aktor", "aktris", "oyuncu", "scenografi", "çekim", "senaryo",
+    "galalar", "düğün", "parti", "kültür", "gece hayatı", "kitap", "yazarlık", "sergi",
+    "resim", "şiir", "komedyen", "şov", "rekor", "yarışma", "canlı yayın", "etkinlikler",
+    "dans", "moda", "sahne arkası", "sosyal medya", "influencer", "vlog", "youtube", "tiktok",
+    "podcast", "radio", "popüler kültür", "televizyon dizisi", "belgesel", "klip", "video",
+    "konser turu", "star", "sosyal etkileşim", "çizgi film", "animasyon", "video oyunları",
+"multimedya", "kart oyunları", "masa oyunları", "virtual reality", "sanal gerçeklik",
+    "çekiliş", "oyun uygulaması", "görsel sanatlar", "konser salonu", "müzik videosu",
+    "radyo programı", "karaoke", "grup", "şarkıcı", "sahne gösterisi", "tartışma", "tartışma programı",
+"yarışmalar", "sosyal etkileşim", "eğlence parkı", "lunapark", "hedef kitlesi", "fan",
+"yıldız", "fan club", "retro", "nostalji", "komedi filmi", "tüm zamanların en iyisi",
+"film ödülleri", "yarışma programı", "eğlence endüstrisi", "gece kulübü", "çılgın eğlence",
+"moda gösterisi", "eğlenceli aktiviteler", "şarkı yarışması", "pop müzik", "rock müzik",
+"futbol izlemek", "spor etkinlikleri", "yarışma şovu", "esprili", "gülmek", "youtuber",
+"kültürel etkinlik", "tanınmış", "popüler şarkı", "radyo yayını", "sohbet", "bulmaca"]
+}
+
+# Metni konu başlıklarıyla karşılaştırmak için bir fonksiyon
+def classify_text(text):
+    # Küçük harfe dönüştür ve kelimelere ayır
+    words_in_text = text.lower().split()
+
+    # Her konu başlığı için kelime sayısını hesapla
+    topic_scores = {topic: 0 for topic in keywords}
+
+    for topic, topic_keywords in keywords.items():
+        for keyword in topic_keywords:
+            if keyword in words_in_text:
+                topic_scores[topic] += 1
+
+    # En yüksek skora sahip olan konuyu bul
+    max_score = max(topic_scores.values())
+
+    # Eğer en yüksek skorda bir eşitlik yoksa, bu konuyu döndür
+    if max_score > 0:
+        most_relevant_topic = [topic for topic, score in topic_scores.items() if score == max_score]
+        return most_relevant_topic[0] if len(most_relevant_topic) == 1 else "diğer konular"
+    else:
+        return "diğer konular"
+
+# Kullanıcıdan metin al
+input_text = input("Bir metin girin: ")
+
+# Metni sınıflandır
+result = classify_text(input_text)
+
+# Sonucu yazdır
+print("Metin en çok şuna aittir:", result)
