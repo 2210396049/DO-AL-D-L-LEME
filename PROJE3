@@ -1,0 +1,22 @@
+!pip install langid # Install the langid package if it is not already installed
+
+import langid # Import the langid module
+
+def detect_language(text):
+    lang, _ = langid.classify(text)
+    language_mapping = {
+        "tr": "Türkçe",
+        "en": "İngilizce",
+        "de": "Almanca",
+        "fr": "Fransızca",
+        "es": "İspanyolca"
+    }
+
+    return language_mapping.get(lang, "Bilinmeyen dil")
+
+# Kullanıcıdan metin alma
+input_text = input("Lütfen bir metin giriniz: ")
+
+# Dili tespit etme
+result = detect_language(input_text)
+print(f"Metnin dili: {result}")
