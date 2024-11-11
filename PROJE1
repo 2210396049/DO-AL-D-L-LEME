@@ -1,0 +1,104 @@
+def dil_tespit(metin):
+    # Dillerin temel kelimeleri
+    diller = {
+        'Türkçe': ['ve','merhaba','bir', 'ben', 'de', 'da', 'bu', 'o', 'için', "ve", "bir", "bu", "da", "ile", "için", "de", "en", "ne", "ama",
+    "ki", "o", "ben", "gibi", "mi", "olarak", "şu", "sen", "kendi", "bu kadar",
+    "sizde", "onun", "ya", "biz", "görmek", "olmak", "çok", "hep", "oldu",
+    "yine", "her", "böyle", "sana", "onlar", "şey", "kadar", "bu yüzden", "daha",
+    "daima", "o kadar", "çokça", "bu kadar", "hiç", "şimdi", "her şey", "neden",
+    "gün", "arkadaş", "çalışmak", "gelmek", "gitmek", "çünkü", "anlamak", "istemek",
+    "yapmak", "götürmek", "takip etmek", "gel", "geçmek", "söylemek", "başlamak",
+    "yarın", "hayat", "şey", "güzel", "bunu", "bu iş", "korkmak", "mümkün", "zaman",
+    "doğru", "çalışan", "önemli", "özellikle", "büyük", "kendi", "şu anda", "vermek",
+    "bu şekilde", "yavaşça", "yardım", "çalışma", "bu yüzden", "herhangi", "sadece",
+    "başka", "eğitim", "neden", "yine", "istedi", "önce", "yavaş", "doğrudan", "geri",
+    "almak", "yol", "başarı", "özellikle", "yani", "günlük", "bulmak", "şirket", "gelişmek",
+    "bugün", "önemli", "az", "sevgi", "diğer", "bunu", "çalışmak", "mecbur", "belirli",
+    "kişisel", "şüphe", "tartışma", "olması", "çıkmak", "başarı", "öğrenmek", "insan",
+    "göstermek", "katılmak", "değişmek", "yeni", "açık", "herkes", "olmadı", "sonra",
+    "uygun", "doğal", "çalışmak", "müdür", "çoğu", "gizli", "toplamak", "bulmak", "belirlemek",],
+        'İngilizce': ['the', 'is','hi', 'a', 'and', 'to', 'in', 'it', 'that'"the", "be", "to", "of", "and", "a", "in", "that", "have", "I",
+    "it", "for", "not", "on", "with", "he", "as", "you", "do", "at",
+    "this", "but", "his", "by", "from", "they", "we", "say", "her", "she",
+    "or", "an", "will", "my", "one", "all", "would", "there", "their", "what",
+    "so", "up", "out", "if", "about", "who", "get", "which", "go", "me",
+    "when", "make", "can", "like", "time", "no", "just", "him", "know", "take",
+     "people", "into", "year", "your", "good", "some", "could", "them", "see",
+    "other", "than", "then", "now", "look", "only", "come", "its", "over", "think",
+    "also", "back", "after", "use", "two", "how", "our", "work", "first", "well",
+    "way", "even", "new", "want", "because", "any", "these", "give", "day", "most",
+    "us", "is", "are", "was", "were", "been", "being", "have", "has", "had",
+    "this", "but", "his", "by", "from", "they", "we", "say", "her", "she",
+    "or", "an", "will", "my", "one", "all", "would", "there", "their", "what",
+    "so", "up", "out", "if", "about", "who", "get", "which", "go", "me",
+    "when", "make", "can", "like", "time", "no", "just", "him", "know", "take",
+    "people", "into", "year", "your", "good", "some", "could", "them", "see",
+    "other", "than", "then", "now", "look", "only", "come", "its", "over", "think",
+    "also", "back", "after", "use", "two", "how", "our", "work", "first", "well",
+    "way", "even", "new", "want", "because", "any", "these", "give", "day", "most",
+    "us", "is", "are", "was", "were", "been", "being", "have", "has", "had",
+    "having", "he's", "she's", "it's", "we're", "they're", "i'm", "you're", "they've",
+    "i've", "you're", "would", "should", "could", "did", "does", "doing", "done", "don't",],
+        'Almanca': ['der', 'die', 'das', 'und', 'ein', 'zu', 'in', 'ist'"der", "die", "und", "in", "den", "von", "zu", "das", "mit", "sich",
+    "auf", "für", "ist", "im", "es", "ich", "nicht", "die", "eine", "auch",
+    "werden", "an", "aus", "er", "als", "hat", "wir", "mit", "dem", "dass",
+    "nicht", "sie", "des", "ein", "eine", "war", "kann", "noch", "hatte", "aber",
+    "nur", "werden", "sehr", "mehr", "beim", "dies", "da", "alle", "was", "wenn",
+    "oder", "wie", "für", "über", "um", "noch", "vor", "zur", "nach", "sehen",
+    "wer", "aus", "hier", "wurde", "jetzt", "uns", "denn", "mein", "einige", "ihn",
+    "wird", "von", "mit", "über", "an", "haben", "gibt", "nein", "jemand", "etwas",
+    "neue", "direkt", "zurück", "sie", "alle", "diese", "könnte", "ganz", "auch",
+    "seine", "konnte", "muss", "direkt", "welche", "durch", "jemals", "immer", "als",
+    "uns", "erst", "gegen", "damit", "klar", "sehen", "damit", "soll", "kein", "viel",],
+        'Fransızca': ['le', 'la', 'et', 'un', 'à', 'de', 'est', 'dans'"le", "de", "un", "être", "à", "et", "en", "avoir", "que", "pour",
+    "dans", "ce", "il", "qui", "ne", "sur", "pas", "plus", "pouvoir", "par", "je",
+    "avec", "tout", "faire", "son", "mettre", "autre", "si", "dire", "leur", "bien",
+    "où", "lui", "ans", "savoir", "voir", "tout", "penser", "avoir", "cette", "donner",
+    "jour", "comprendre", "savoir", "y", "avec", "penser", "même", "toujours", "très",
+    "quel", "prendre", "chose", "nous", "aucun", "trouver", "faut", "rendre", "quand",
+    "plus", "deux", "aussi", "alors", "d'abord", "venir", "là", "voilà", "chacun",
+    "demander", "temps", "sans", "oui", "encore", "très", "voir", "lorsque", "falloir",
+    "temps", "devoir", "vouloir", "juste", "beaucoup", "mon", "autres", "moi", "faire",
+    "puis", "sont", "aussi", "tous", "seulement", "bon", "après", "avant", "entre", "partir",
+    "aussi", "celui", "voici", "donc", "alors", "tous", "si", "chaque", "non", "dire",
+    "nous", "rien", "encore", "peut-être", "c'est", "venir", "fois", "quelque", "aucun",
+    "rester", "pendant", "parler", "trouver", "même", "nouveau", "monde", "arriver", "contre",],
+        'İspanyolca': ['el', 'la', 'y', 'un', 'en', 'de', 'es', 'que'"el", "de", "que", "y", "a", "en", "ser", "se", "no", "haber",
+    "por", "con", "su", "para", "como", "estar", "tener", "le", "lo", "hacer",
+    "más", "o", "pero", "muy", "ya", "entre", "cuando", "todo", "al", "desde",
+    "todo", "nosotros", "la", "usted", "sólo", "hace", "también", "ni", "ver",
+    "porque", "dar", "cada", "hacer", "ir", "bien", "vez", "mucho", "saber",
+    "tener", "todo", "ella", "ese", "tú", "día", "uno", "cosa", "años",
+    "muchos", "partir", "uno", "hacer", "bien", "es", "me", "tiempo", "mismo",
+    "como", "ahora", "después", "nuevo", "trabajo", "mientras", "nada", "si",
+    "bueno", "aunque", "cuando", "cual", "cómo", "quien", "fue", "lugar", "todo",
+    "quedar", "poder", "cualquier", "ese", "noche", "te", "mujer", "nada",
+    "hombre", "largo", "fin", "muchas", "trabajar", "grande", "cada", "antes",
+    "algo", "muchas", "bajo", "siempre", "cerca", "alrededor", "poner", "nuestra",]
+    }
+
+    # Kelime sayacı
+    dil_sayaci = {dil: 0 for dil in diller}
+
+    # Metni kelimelere ayır
+    kelimeler = metin.lower().split()
+
+    # Her kelimeyi kontrol et
+    for kelime in kelimeler:
+        for dil, kelime_listesi in diller.items():
+            if kelime in kelime_listesi:
+                dil_sayaci[dil] += 1
+
+    # En yüksek sayıya sahip dili bul
+    en_yuksek_dil = max(dil_sayaci, key=dil_sayaci.get)
+
+    # Eğer en yüksek sayı 0 ise, dil tespit edilemedi
+    if dil_sayaci[en_yuksek_dil] == 0:
+        return "Dil tespit edilemedi."
+
+    return f"Girilen metin muhtemelen '{en_yuksek_dil}' dilindedir."
+
+# Kullanıcıdan metin alma
+metin = input("Lütfen bir metin giriniz: ")
+sonuc = dil_tespit(metin)
+print(sonuc)
