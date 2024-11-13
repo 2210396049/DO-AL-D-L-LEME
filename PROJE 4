@@ -1,0 +1,85 @@
+!pip install nltk scikit-learn pandas
+import pandas as pd
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+import string
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report
+
+# NLTK stopwords indirilmeli
+nltk.download('punkt')
+nltk.download('stopwords')
+
+# Veri kümesi
+data = {
+    'Metin': [
+        'Yazılım geliştirme süreci oldukça karmaşıktır.',
+        'Futbol maçı çok heyecanlı geçti.',
+        'Sağlık için egzersiz yapmak önemlidir.',
+        'Teknolojik yenilikler hızla ilerliyor.',
+        'Siyasetteki son gelişmeler büyük yankı uyandırdı.',
+        'Yeni bir film izledim ve çok beğendim.',
+        'Kanser tedavisinde yeni tedavi yöntemleri geliştirildi.',
+        'Apple yeni bir telefon modelini tanıttı.'
+    ],
+    'Konular': [
+        'Teknoloji', 'Spor', 'Sağlık', 'Teknoloji', 'Siyaset', 'Eğlence', 'Sağlık', 'Teknoloji'
+    ] # Konular listesi Metin listesiyle aynı uzunlukta olmalı. Her metin için bir konu belirtilmelidir.
+}
+
+df = pd.DataFrame(data)
+
+# Stopwords listesi
+stop_words = set(stopwords.words('turkish'))
+
+# Metin ön işleme fonksiyonu
+def metin_on_isleme(metin):
+    metin = metin.lower()
+    metin = metin.translate(str.maketrans('', '', string.punctuation))
+    kelimeler = word_tokenize(metin)
+    kelimeler = [kelime for kelime in kelimeler if kelime not in stop_words]
+    return ' '.join(kelimeler)
+
+# Metinleri işleme
+df['Metin'] = df['Metin'].apply(metin_on_isleme)
+
+# TF-IDF vektörleştirici
+vectorizer = TfidfVectorizer()
+X = vectorizer.fit_transform(df['Metin'])
+
+# Etiketler
+y = df['Konular']
+
+# Eğitim ve test verilerine ayırma
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Modeli eğitme
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Test verisi ile tahmin yapma
+y_pred = model.predict(X_test)
+
+# Model değerlendirme
+print(f"Doğruluk Skoru: {accuracy_score(y_test, y_pred)}")
+print(f"Sınıflandırma Raporu:\n{classification_report(y_test, y_pred)}")
+
+# Kullanıcıdan metin almak ve sınıflandırma yapmak
+def metin_siniflandir(metin):
+    metin = metin_on_isleme(metin)
+    metin_tfidf = vectorizer.transform([metin])
+    tahmin = model.predict(metin_tfidf)
+    return tahmin[0]
+
+# Kullanıcıdan metin alma ve sınıflandırma
+def kullanici_metin_girisi():
+    print("Lütfen bir metin girin ve program metni sınıflandırsın:")
+    gelen_metin = input()
+    sonuc = metin_siniflandir(gelen_metin)
+    print(f"Metin, '{sonuc}' konusuyla ilişkilendirildi.")
+
+# Programı başlatma
+kullanici_metin_girisi()
